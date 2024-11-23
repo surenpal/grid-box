@@ -1,0 +1,77 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --bg-color: #ffffb7; /* background-color */
+  --div-color: #a8ffa8; /* div-color */
+  --text-color: #f0f0f0; /* text-color */
+}
+.grid-container {
+  margin: 20px;
+  display: grid;
+  grid-template-rows: 100px 150px 180px 100px;
+  grid-template-columns: 200px 200px 200px 150px;
+  gap: 5px;
+  /*
+  grid-template-areas:
+    "header header header header"
+    "box1 box2 box3 sidebar"
+    "main-content sidebar side-bar side-bar" "footer footer footer footer";
+    */
+}
+.box {
+  background-color: var(--div-color);
+}
+/*
+.header {
+  grid-area: header;
+}
+.box1 {
+  grid-area: small-box1;
+}
+.box2 {
+  grid-area: small-box2;
+}
+.box3 {
+  grid-area: small-box3;
+}
+.main-content {
+  grid-area: content;
+}
+.sidebar {
+  grid-area: sidebar;
+}
+.foot {
+  grid-area: footer;
+}
+*/
+.header {
+  grid-row: 1/2;
+  grid-column: 1/5;
+}
+.box1 {
+  grid-row: 2/3;
+  grid-column: 1/2;
+}
+.box2 {
+  grid-row: 2/3;
+  grid-column: 2/3;
+}
+.box3 {
+  grid-row: 2/3;
+  grid-column: 3/4;
+}
+.main-content {
+  grid-row: 3/4;
+  grid-column: 1/4;
+}
+.side-bar {
+  grid-row: 2/4;
+  grid-column: 4/5;
+}
+.foot {
+  grid-row: 4/5;
+  grid-column: 1/5;
+}
